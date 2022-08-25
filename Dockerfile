@@ -1,5 +1,3 @@
-#Testing changes
-
 FROM ghcr.io/linuxserver/baseimage-rdesktop-web:focal
 
 LABEL org.opencontainers.image.authors="michael@maldonado.tech"
