@@ -25,7 +25,7 @@ RUN \
         /var/tmp/* \
         /tmp/*
 
-# set version label
+# set version label - current version as of 2022-08-25
 ARG OBSIDIAN_VERSION=0.15.9
 
 
