@@ -30,7 +30,7 @@ RUN \
 # set version label - current version as of 2022-08-25
 ARG OBSIDIAN_VERSION=0.15.9
 
-
+#Download Obsidian
 RUN \
     echo "**** download obsidian ****" && \
         curl \
