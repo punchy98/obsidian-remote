@@ -38,6 +38,7 @@ RUN \
         -L \
         -o obsidian.AppImage
 
+#Extract Obsidian
 RUN \
     echo "**** extract obsidian ****" && \
         chmod +x /obsidian.AppImage && \
