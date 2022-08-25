@@ -15,7 +15,10 @@ RUN \
             libnss3 \
             # Install Chrome dependencies.
             dbus-x11 \
-            uuid-runtime && \
+            uuid-runtime
+
+#Clean up
+RUN \
     echo "**** cleanup ****" && \
         apt-get autoclean && \
         rm -rf \
