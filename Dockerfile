@@ -5,6 +5,7 @@ LABEL org.opencontainers.image.source="https://github.com/punchy98/obsidian-remo
 LABEL org.opencontainers.image.title="Containerized Obsidian instance"
 LABEL org.opencontainers.image.description="Containerized Obsidian instance"
 
+#Install updates and packages
 RUN \
     echo "**** install packages ****" && \
         # Update and install extra packages.
