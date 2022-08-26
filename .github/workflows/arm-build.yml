@@ -27,6 +27,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v3.1.1
         with:
+          platforms: linux/arm/v8
           context: .
           file: ./Dockerfile.arm
           push: true
