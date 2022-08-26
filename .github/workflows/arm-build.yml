@@ -1,10 +1,11 @@
 name: Docker Arm Build
 
 on:
-  - push:
-      branches: [testing-arm]
+   - workflow_dispatch
+
+#  - push:
+#      branches: [testing-arm]
  #   tags: ['v*.*.*']
-  - workflow_dispatch:
 
 
 jobs:
