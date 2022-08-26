@@ -46,7 +46,7 @@ jobs:
           file: ./Dockerfile
           build-args: OBSIDIAN_VERSION=${{ steps.obver.outputs.OBVERSION }}
           push: true
-          tags: ${{ steps.tag_version.outputs.new_tag }}
+          tags: ghcr.io/${{ github.repository_owner }}/obsidian-remote:${{ steps.tag_version.outputs.new_tag }}
 #testing auto versioning + auto release
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
