@@ -6,24 +6,16 @@ Use `http://localhost:8080/` to access it locally, do not expose this to the web
 
 ## Using the Container
 
-To run a interactive version to test it out. This is using windows based path, update for the OS you are running on.
+To run a interactive version to test it out. 
 
-```PowerShell
-docker run --rm -it `
-  -v D:/ob/vaults:/vaults `
-  -v D:/ob/config:/config `
-  -p 8080:8080 `
-  ghcr.io/punchy98/obsidian-remote:latest
+```
+docker run --rm -it -v /obsidian/vaults:/vaults -v /obsidian/config:/config -p 8080:8080 ghcr.io/punchy98/obsidian-remote:latest
 ```
 
 To run it as a daemon in the background.
 
-```PowerShell
-docker run -d `
-  -v D:/ob/vaults:/vaults `
-  -v D:/ob/config:/config `
-  -p 8080:8080 `
-  ghcr.io/punchy98/obsidian-remote:latest
+```
+docker run -d -v /obsidian/vaults:/vaults -v /obsidian/config:/config -p 8080:8080 ghcr.io/punchy98/obsidian-remote:latest
 ```
 
 ### Ports
@@ -63,8 +55,8 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - /home/obsidian/vaults:/vaults
-      - /home/obsidian/config:/config
+      - /obsidian/vaults:/vaults
+      - /obsidian/config:/config
     environment:
       - PUID=1000
       - PGID=1000
@@ -78,13 +70,8 @@ This container uses the base images from linuxserver.io. This means you can the 
 
 ### Docker CLI example
 
-```PowerShell
-docker run -d `
-  -v D:/ob/vaults:/vaults `
-  -v D:/ob/config:/config `
-  -p 8080:8080 `
-  -e DOCKER_MODS=linuxserver/mods:universal-git `
-  ghcr.io/punchy98/obsidian-remote:latest
+```
+docker run -d -v /obsidian/vaults:/vaults -v /obsidian/config:/config -p 8080:8080 -e DOCKER_MODS=linuxserver/mods:universal-git ghcr.io/punchy98/obsidian-remote:latest
 ```
 
 ## Reloading Obsidan in the Browser
@@ -95,14 +82,8 @@ If you make changes to plugins or do updates that need to have obsidian restarte
 
 To set PUID and PGID use the follow environment variables on the command line, by default the IDs are 911/911
 
-```PowerShell
-docker run --rm -it `
-  -v D:/ob/vaults:/vaults `
-  -v D:/ob/config:/config `
-  -e PUID=1000 `
-  -e PGID=1000 `
-  -p 8080:8080 `
-  ghcr.io/punchy98/obsidian-remote:latest
+```
+docker run --rm -it -v /obsidian/vaults:/vaults -v /obsidian/config:/config -e PUID=1000 -e PGID=1000 -p 8080:8080 ghcr.io/punchy98/obsidian-remote:latest
 ```
 
 Or, if you use docker-compose, add them to the environment: section:
@@ -113,29 +94,16 @@ environment:
   - PGID=1000
 ```
 
-It is most likely that you will use the id of yourself, which can be obtained by running the command below. The two values you will be interested in are the uid and gid.
-
-```powershell
-id $user
-```
-
 ## Building locally
 
 To build and use it locally run the following commands:
 
-```PowerShell
-docker build --pull --rm `
-  -f "Dockerfile" `
-  -t obsidian-remote:latest `
-  "."
+```
+docker build --pull --rm -f Dockerfile -t obsidian-remote:latest .
 ```
 
-To run the localy build image:
+To run the locally build image:
 
-```PowerShell
-docker run --rm -it `
-  -v D:/ob/vaults:/vaults `
-  -v D:/ob/config:/config `
-  -p 8080:8080 `
-  obsidian-remote:latest bash
+```
+docker run --rm -it -v /obsidian/vaults:/vaults -v /obsidian/config:/config -p 8080:8080 obsidian-remote:latest bash
 ```
