@@ -1,4 +1,5 @@
 # obsidian-remote
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/punchy98/obsidian-remote?style=plastic)
 
 This docker image allows you to run obsidian in docker as a container and access it via your web browser.
 
