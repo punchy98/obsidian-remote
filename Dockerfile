@@ -27,8 +27,8 @@ RUN \
         /var/tmp/* \
         /tmp/*
 
-# set version label - current version as of 2023-05-02
-ARG OBSIDIAN_VERSION=1.2.7
+# set version label - current version as of 2024-09-06
+ARG OBSIDIAN_VERSION=1.6.7
 
 #Download Obsidian
 RUN \
