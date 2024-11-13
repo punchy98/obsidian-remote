@@ -28,7 +28,7 @@ RUN \
         /tmp/*
 
 # set version label - current version as of 2024-09-06
-ARG OBSIDIAN_VERSION=1.6.7
+ARG OBSIDIAN_VERSION=1.7.6
 
 #Download Obsidian
 RUN \
