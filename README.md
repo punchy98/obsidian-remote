@@ -1,3 +1,12 @@
+# Repo update 2024-11-27
+
+I recently discovered LinuxServer.io now has an Obsidian container. I have not tried it, but it is bound to be more active and maintained than this one. 
+
+https://github.com/linuxserver/docker-obsidian
+
+
+
+
 # obsidian-remote
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/punchy98/obsidian-remote?style=plastic)
 
